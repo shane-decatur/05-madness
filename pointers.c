@@ -32,4 +32,8 @@ int main(){
   unsigned int u = 60;
   int *u_int = &u;
   int *u_char = &u;
+
+  printf("u_int: %p u_int points to %u\n",u_int,*u_int);
+  printf("u_char: %p u_char points to %u\n",u_char,*u_char);
+  printf("hex: %x  dec: %u\n",u,u);
 }
