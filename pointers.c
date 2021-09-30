@@ -29,7 +29,7 @@ int main(){
   printf("long: %ld\n\n",l);
 
 
-  unsigned int u = 60000;
+  unsigned int u = 12345678;
   int *u_int = &u;
   char *u_char = &u;
 
@@ -43,5 +43,22 @@ int main(){
     temp = u_char + count;
     printf("dec byte %d: %hhu\n",count+1,*temp);
     printf("hex byte %d: %hhx\n\n",count+1,*temp);
+  }
+
+//step 10
+  printf("\nstep 10\n");
+
+  for (count = 0; count < 4; count++){
+    temp = u_char + count;
+    printf("dec byte %d: %hhu\n",count+1,*temp+1);
+    printf("hex byte %d: %hhx\n\n",count+1,*temp+1);
+  }
+
+//step 11
+  printf("\nstep 11\n");
+  for (count = 0; count < 4; count++){
+    temp = u_char + count;
+    printf("dec byte %d: %hhu\n",count+1,*temp+16);
+    printf("hex byte %d: %hhx\n\n",count+1,*temp+16);
   }
 }
