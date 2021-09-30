@@ -29,11 +29,19 @@ int main(){
   printf("long: %ld\n\n",l);
 
 
-  unsigned int u = 60;
+  unsigned int u = 60000;
   int *u_int = &u;
-  int *u_char = &u;
+  char *u_char = &u;
 
   printf("u_int: %p u_int points to %u\n",u_int,*u_int);
   printf("u_char: %p u_char points to %u\n",u_char,*u_char);
-  printf("hex: %x  dec: %u\n",u,u);
+  printf("hex: %x  dec: %u\n\n",u,u);
+
+  int count;
+  char *temp;
+  for (count = 0; count < 4; count++){
+    temp = u_char + count;
+    printf("dec byte %d: %hhu\n",count+1,*temp);
+    printf("hex byte %d: %hhx\n\n",count+1,*temp);
+  }
 }
